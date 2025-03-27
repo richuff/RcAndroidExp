@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/account_title"/>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账单日期:"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/account_date"
+            android:paddingTop="5dp"
+            android:textAlignment="center"
+            android:text="2020-12-12"
+            android:textSize="30sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="账单类型:"
+            android:textSize="30sp" />
+
+       <RadioGroup
+           android:id="@+id/rg_type"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="horizontal">
+           <RadioButton
+               android:id="@+id/income"
+               android:text="收入"
+               android:textSize="25sp"
+               android:layout_marginStart="20dp"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"/>
+
+           <RadioButton
+               android:id="@+id/cost"
+               android:text="支出"
+               android:layout_marginStart="50dp"
+               android:textSize="25sp"
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"/>
+       </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="55dp"
+            android:layout_height="match_parent"
+            android:text="说明事项:"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/et_remark"
+            android:background="@drawable/edit_text_border_selector"
+            android:paddingBottom="100dp"
+            android:paddingStart="5dp"
+            android:hint="请写出说明原因:"
+            android:layout_marginStart="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="金额:"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/et_amount"
+            android:background="@drawable/edit_text_border_selector"
+            android:hint="单位元:"
+            android:paddingStart="5dp"
+            android:layout_marginStart="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/save"
+        android:layout_marginTop="20dp"
+        android:text="保存"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"/>
+
+</LinearLayout>
