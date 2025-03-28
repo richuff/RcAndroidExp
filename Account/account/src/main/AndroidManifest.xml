@@ -8,6 +8,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Application3">
+        <activity android:name=".MainActivity">
+
+        </activity>
         <activity
             android:name=".DateBill"
             android:exported="true">

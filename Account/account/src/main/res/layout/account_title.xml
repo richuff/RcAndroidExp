@@ -6,6 +6,7 @@
 
     <TextView
         android:id="@+id/back"
+        android:layout_marginTop="20dp"
         android:layout_width="65dp"
         android:layout_height="match_parent"
         android:text="返回"

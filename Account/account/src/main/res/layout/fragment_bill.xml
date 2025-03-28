@@ -3,17 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.DynamicFragment">
+    tools:context=".fragment.BillFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/ims"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
-
-    <TextView
-        android:id="@+id/imm"
+    <ListView
+        android:id="@+id/lv_bill"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
+
 </FrameLayout>

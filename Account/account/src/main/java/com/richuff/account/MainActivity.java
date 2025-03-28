@@ -1,6 +1,7 @@
 package com.richuff.account;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
@@ -12,13 +13,11 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Random;
-import java.util.UUID;
 
-import Entity.BillInfo;
-import utils.BillDbHelper;
-import utils.DateUtil;
+import com.richuff.account.Entity.BillInfo;
+import com.richuff.account.utils.BillDbHelper;
+import com.richuff.account.utils.DateUtil;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, DatePickerDialog.OnDateSetListener {
@@ -42,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         tv_option.setText("账单列表");
         //设置账单日期
         calendar = Calendar.getInstance();
+
         tv_date = findViewById(R.id.account_date);
         et_amount = findViewById(R.id.et_amount);
         et_remark = findViewById(R.id.et_remark);
@@ -51,7 +51,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         tv_date.setOnClickListener(this);
         findViewById(R.id.save).setOnClickListener(this);
+        findViewById(R.id.back).setOnClickListener(this);
     }
+
 
 
     @Override
@@ -80,6 +82,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
             dbHelper.closeLink();
+        }else if (v.getId() == R.id.back){
+            finish();
         }
     }
 
